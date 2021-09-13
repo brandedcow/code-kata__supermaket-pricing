@@ -4,7 +4,7 @@ class PromoCode {
   constructor() {
     this.id = uuidv4()
     this.targets = []
-    this.modifier = () => {}
+    this.modifier = price => price
   }
 
   affects(itemId) {
