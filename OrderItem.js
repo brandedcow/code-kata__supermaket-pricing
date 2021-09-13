@@ -1,4 +1,3 @@
-
 class OrderItem {
   constructor() {
     this.item = null

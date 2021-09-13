@@ -1,0 +1,22 @@
+{
+  "name": "code-kata__supermarket-pricing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandedcow/code-kata__supermaket-pricing.git"
+  },
+  "author": "Chris Kang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brandedcow/code-kata__supermaket-pricing/issues"
+  },
+  "homepage": "https://github.com/brandedcow/code-kata__supermaket-pricing#readme",
+  "dependencies": {
+    "uuid": "^8.3.2"
+  }
+}
