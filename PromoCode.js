@@ -10,14 +10,14 @@ class PromoCode {
     this.modifier = item => item
   }
   
-  isValid() {
+  isValid = () => {
     return isWithinInterval(
       new Date(),
       { start: this.startDate, end: this.endDate }
     )
   }
 
-  affects(itemId) {
+  affects = (itemId) => {
     return this.targets.includes(itemId)
   }
 }

@@ -1,7 +1,4 @@
 class OrderItem {
-  item = null
-  quantity = 0
-
   constructor(item, quantity) {
     this.item = item
     this.quantity = quantity

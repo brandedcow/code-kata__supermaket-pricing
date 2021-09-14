@@ -6,10 +6,6 @@ class Item {
     this.name = name
     this.price = price
   }
-
-  getPrice() {
-    return this.price
-  }
 }
 
 module.exports = Item
