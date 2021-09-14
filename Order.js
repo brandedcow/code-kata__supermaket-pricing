@@ -3,6 +3,7 @@ class Order {
     this.orderItems = []
     this.total = 0
     this.promoCodes = []
+    this.limit = 3
   }
 
   addItem = (item) => {
@@ -10,17 +11,19 @@ class Order {
   }
 
   addCode = (code) => {
-    this.promoCodes = [...this.promoCodes, code]
+    if (limit > 0) {
+      this.promoCodes = [...this.promoCodes, code]
+      limit -= 1
+    }
   }
 
   applyPromo = (orderItem) => {
-    let modifiedOrderItem = orderItem
     for (let code of this.promoCodes) {
       if (code.affects(orderItem.getItemId())) {
-        modifiedOrderItem.getPrice = code.modifier
+        orderItem.addModifier(code.modifier)
       }
     }
-    return modifiedOrderItem
+    return orderItem
   }
 
   getTotalPrice() {
