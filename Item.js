@@ -1,10 +1,15 @@
+const { v4: uuidv4 } = require('uuid')
+
 class Item {
-  constructor() {
-    this.name = ""
-    this.price = 0
+  constructor(name, price) {
+    this.id = `item-${uuidv4()}` 
+    this.name = name
+    this.price = price
   }
 
   getPrice() {
     return this.price
   }
 }
+
+module.exports = Item

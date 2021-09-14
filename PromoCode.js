@@ -2,12 +2,12 @@ const { v4: uuidv4 } = require('uuid')
 const isWithinInterval = require('date-fns/isWithinInterval')
 
 class PromoCode {
-  constructor(start = new Date(), end = new Date()) {
+  constructor(start = new Date(), end = new Date(), targets) {
     this.id = uuidv4()
     this.startDate = start
     this.endDate = end
-    this.targets = []
-    this.modifier = price => price
+    this.targets = targets
+    this.modifier = item => item
   }
   
   isValid() {
@@ -19,10 +19,6 @@ class PromoCode {
 
   affects(itemId) {
     return this.targets.includes(itemId)
-  }
-
-  getModifier() {
-    return this.modifier
   }
 }
 
